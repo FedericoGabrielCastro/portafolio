@@ -4,6 +4,8 @@ class MyDocument extends Document {
     render() {
         return (
             <Html lang="en">
+                <title>Federico Castro</title>
+                <link rel='shortcut icon' href='/avatar.jpeg'/>
                 <Head>
                     <meta charSet="utf-8" />
                     <link rel='preconnect' href='https://fonts.gstatic.com'/>
@@ -12,7 +14,7 @@ class MyDocument extends Document {
                         rel="stylesheet"
                     />
                 </Head>
-                <body className='bg-gradient-to-r from-green to-blue-400'>
+                <body className='bg-gradient-to-r from-green to-blue-400 dark:from-slate-800 dark:to-slate-700 '>
                     <Main />
                     <NextScript />
                 </body>

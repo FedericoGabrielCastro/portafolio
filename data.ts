@@ -2,60 +2,104 @@ import { IExperience, IProjects, ISkills, ITestimonials } from "./types";
 
 export const skills: ISkills[] = [
     {
+        description: "Angular",
         image: "/angular.svg"
     },
     {
+        description: "CSS",
         image: "/css-3.svg"
     },
     {
+        description: "Git",
         image: "/git.svg"
     },
     {
+        description: "Html5",
         image: "/html-5.svg"
     },
     {
+        description: "Javascript",
         image: "/javascript.svg"
     },
     {
+        description: "Jira",
         image: "/jira.svg"
     },
     {
+        description: "Next",
         image: "/nextjs.svg"
     },
     {
+        description: "Node.js",
         image: "/nodejs.svg"
     },
     {
+        description: "React",
         image: "/react.svg"
     },
     {
+        description: "Redux-saga",
         image: "/redux-saga.svg"
     },
     {
+        description: "Redux",
         image: "/redux.svg"
     },
     {
+        description: "Sass",
         image: "/sass.svg"
     },
     {
+        description: "Tailwind",
         image: "/tailwindcss.svg"
     },
     {
+        description: "Trello",
         image: "/trello.svg"
     },
     {
+        description: "Node.ts",
         image: "/tsnode.svg"
     },
     {
+        description: "TypeScript",
         image: "/typescript.svg"
     },
     {
+        description: "Vue",
         image: "/vue.svg"
     },
 ]
 
 // list of projects.
 export const projects: IProjects[] = [
+    {
+        name: "Portafolio",
+        description: "The portfolio where are you seeing this",
+        image_path: "/portafolio.jpg",
+        deployed_url: "",
+        github_url: "https://github.com/FedericoGabrielCastro/portafolio",
+        category: ["next"],
+        key_techs: ["Next", "Typescript", "Tailwind"]
+    },
+    {
+        name: "Portafolio",
+        description: "The portfolio where are you seeing this",
+        image_path: "/portafolio.jpg",
+        deployed_url: "",
+        github_url: "https://github.com/FedericoGabrielCastro/portafolio",
+        category: ["next"],
+        key_techs: ["Next", "Typescript", "Tailwind"]
+    },
+    {
+        name: "Portafolio",
+        description: "The portfolio where are you seeing this",
+        image_path: "/portafolio.jpg",
+        deployed_url: "",
+        github_url: "https://github.com/FedericoGabrielCastro/portafolio",
+        category: ["next"],
+        key_techs: ["Next", "Typescript", "Tailwind"]
+    },
     {
         name: "Portafolio",
         description: "The portfolio where are you seeing this",
@@ -90,7 +134,7 @@ export const experience: IExperience[] = [
         dateStart: "11/2020",
         dateFinish: "11/2021",
         description: "Development of a mobile and web travel app to connect with other travelers and share their experiences",
-        aptitudes: "React.js · React.Native · JavaScript"
+        aptitudes: "React.js · React.Native"
     }
 ]
 

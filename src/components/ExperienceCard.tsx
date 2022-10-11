@@ -5,7 +5,7 @@ const ExperienceCard: FunctionComponent<{experience: IExperience}> = ({
     experience: {title, description, dateStart, dateFinish, aptitudes}
 }) => {
     return (
-        <div className='flex items-stretch justify-between p-2 space-x-4 bg-gray-100 shadow-xl h-36 rounded-xl'>
+        <div className='flex items-stretch justify-between h-32 p-4 bg-gray-100 shadow-xl rounded-xl dark:bg-gray-700 dark:text-white'>
          {/* <Image src={icon} alt={title} height={10} width={50} layout="responsive"/> */}
          <div className='flex flex-col justify-center gap-2'>
             <div className='flex justify-between h-auto'>

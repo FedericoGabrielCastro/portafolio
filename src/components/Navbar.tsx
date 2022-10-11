@@ -15,7 +15,7 @@ const NavItem: FunctionComponent<NavbarItem> = ({activeItem, name, route, handle
         <Link href={route}>
             <a>
                 <span
-                    className="hover:text-green" 
+                    className="hover:text-green dark:text-white dark:hover:text-green" 
                     onClick={() => handleSelecLink(name)}>{name}</span>
             </a>
         </Link>

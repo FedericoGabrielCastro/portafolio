@@ -13,6 +13,7 @@ export type ICategory = "react" | "node" | "express" | "javascript" | "typescrip
 
 export interface ISkills {
     image: string
+    description: string
 }
 
 export interface IExperience {

@@ -31,11 +31,11 @@ const Projects = () => {
                 handlerFilterCategory={handlerFilterCategory}
                 active={active}
             />
-            <motion.div variants={fadeInUpChildrens} animate="animate" initial="initial" className="relative grid grid-cols-12 gap-4 p-2 my-3">
+            <motion.div variants={fadeInUpChildrens} animate="animate" initial="initial" className="relative grid grid-cols-12 gap-4 p-2 my-3 overflow-scroll ">
                 {
                     projects.map(projects => {
                         return (
-                            <motion.div variants={fadeInUP} key={projects.name} className="col-span-12 p-2 bg-gray-200 rounded-lg sm:col-span-6 lg:col-span-4">
+                            <motion.div variants={fadeInUP} key={projects.name} className="col-span-12 p-2 overflow-scroll bg-gray-200 rounded-lg dark:bg-gray-700 sm:col-span-6 lg:col-span-4">
                                 <ProjectCard  project={projects} />
                             </motion.div> 
                         )
