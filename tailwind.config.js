@@ -1,16 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: [
+  content: [
     "./src/pages/**/*.tsx",
     "./src/components/**/*.tsx",
   ],
-  // darkMode: false,
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
         green: {
           DEFAULT: "#00f260"
-        }
+        },
       }
     },
   },

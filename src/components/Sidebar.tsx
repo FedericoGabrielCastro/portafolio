@@ -2,11 +2,15 @@ import Image from "next/image"
 import { AiFillGithub, AiFillLinkedin, AiFillGift } from 'react-icons/ai'
 import { GoLocation } from 'react-icons/go'
 import { GiTie } from 'react-icons/gi'
+import { useTheme } from "next-themes"
 
 const Sidebar = () => {
 
-    const handleChangeTheme = () => {
+    const { theme, setTheme } = useTheme()
 
+    const handleChangeTheme = () => {
+        setTheme(theme === "light" ? "dark" : "light")
+        console.log(theme)
     }
 
     const handleSendEmail = () => {
@@ -26,10 +30,10 @@ const Sidebar = () => {
                 href=""
                 download="name"> 
                 <GiTie className="w-6 h-6"/> resume</a>
-            <div className="flex justify-around w-9/12 mx-auto my-5 text-green md:w-full">
-                <a href=""> <AiFillGift className="w-8 h-8 cursor-pointer"/></a>
-                <a href=""> <AiFillGithub className="w-8 h-8 cursor-pointer"/></a>
-                <a href=""> <AiFillLinkedin className="w-8 h-8 cursor-pointer"/></a>
+            <div className="flex justify-around w-9/12 mx-auto my-5 md:w-full">
+                {/* <a href=""> <AiFillGift className="w-8 h-8 cursor-pointer"/></a> */}
+                <a href=""> <AiFillGithub className="w-8 h-8 cursor-pointer text-black-500"/></a>
+                <a href=""> <AiFillLinkedin className="w-8 h-8 text-blue-500 cursor-pointer"/></a>
             </div>
             {/* address */}
             <div className="py-4 my-5 bg-gray-200" style={{marginLeft: "-1rem", marginRight: "-1rem"}}>
