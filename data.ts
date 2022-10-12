@@ -106,21 +106,21 @@ export const experience: IExperience[] = [
 export const testimonials: ITestimonials[] = [
     {
         name:"Martín Alejandro Castro Álvearez",
-        image:"/martin.jpeg",
+        image:"/img/martin.jpeg",
         description: "martinDescription",
         date:"10/2022",
         profession:"Software Architect"
     },
     {
         name:"Maximiliano Andrés Britez",
-        image:"/maxi.jpeg",
+        image:"/img/maxi.jpeg",
         description:"maxiDescription",
         date:"10/2022",
         profession:"Software Area Manager"
     },
     {
         name:"Joaquín Mussi",
-        image:"/joaqo.jpeg",
+        image:"/img/joaqo.jpeg",
         description:"joaquinDescription",
         date:"11/2022",
         profession:"FullStack developer"
