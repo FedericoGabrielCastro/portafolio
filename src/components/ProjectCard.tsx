@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { FunctionComponent } from "react";
 import { IProjects } from "../../types";
@@ -21,7 +21,6 @@ const ProjectCard: FunctionComponent<{project: IProjects}> = ({
 }) => {
 
     const [showDatail, setShowDetail] = useState(false)
-    const projectRef = useRef("")
 
     const handleDetails = () => {
         setShowDetail(true)

@@ -1,10 +1,14 @@
 import { ITestimonials } from "../../types"
 import { FunctionComponent } from "react"
 import Image from "next/image"
+import { useTranslation } from "react-i18next"
 
 const TestimonialsCard: FunctionComponent<{testimonials: ITestimonials}> = ({
     testimonials: {name,image,description,date,profession}
 }) => {
+
+    const { t } = useTranslation('testimonials')
+
     return (
         <div className="flex flex-col items-center justify-center w-8/12 h-64 gap-4 p-4 my-2 text-center bg-gray-100 shadow-xl rounded-2xl dark:bg-gray-700 dark:text-white">
             <div className="flex flex-row items-center gap-5">
@@ -15,7 +19,7 @@ const TestimonialsCard: FunctionComponent<{testimonials: ITestimonials}> = ({
                     <p className="text-xs">{date}</p>
                 </div>
             </div>
-            <p className="text-xs text-black lg:text-sm dark:text-white">{description}</p>
+            <p className="text-xs text-black lg:text-sm dark:text-white">{t(description)}</p>
         </div>
     )
 }

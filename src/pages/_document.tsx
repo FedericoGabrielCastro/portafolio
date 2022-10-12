@@ -5,7 +5,7 @@ class MyDocument extends Document {
         return (
             <Html lang="en">
                 <title>Federico Castro</title>
-                <link rel='shortcut icon' href='/avatar.jpeg'/>
+                <link rel='shortcut icon' href='/img/avatar.jpeg'/>
                 <Head>
                     <meta charSet="utf-8" />
                     <link rel='preconnect' href='https://fonts.gstatic.com'/>

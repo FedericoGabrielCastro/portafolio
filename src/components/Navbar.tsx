@@ -1,6 +1,7 @@
 import { useState, useEffect, FunctionComponent } from "react"
 import Link from "next/link"
 import { useRouter } from "next/router"
+import { useTranslation } from "react-i18next"
 
 interface NavbarItem {
     activeItem: string
@@ -11,41 +12,41 @@ interface NavbarItem {
 
 // component link
 const NavItem: FunctionComponent<NavbarItem> = ({activeItem, name, route, handleSelecLink} ) => {   
-    return activeItem !== name ? (
+    
+    const { t } = useTranslation('navbar')
+    
+    return activeItem.toLocaleLowerCase() !== t(name).toLocaleLowerCase() ? (
         <Link href={route}>
             <a>
                 <span
                     className="hover:text-green dark:text-white dark:hover:text-green" 
-                    onClick={() => handleSelecLink(name)}>{name}</span>
+                    onClick={() => handleSelecLink(name)}>{t(name)}</span>
             </a>
         </Link>
     ) : null
 }
 
-
 // Render navbar 
 const Navbar = () => {
 
+    const { t } = useTranslation('navbar')
     const [activeItem, setActiveItem] = useState<string>("")
 
-    const handleSelecLink = (link: string) => {
-        setActiveItem(link)
-        console.log(link)
-    }
-
     const { pathname } = useRouter()
-
+    
     useEffect(() => {
-        if (pathname === "/") setActiveItem("About")
-        if (pathname === "/projects") setActiveItem("Projects")
-        if (pathname === "/resume") setActiveItem("Resume")
+        if (pathname === "/") setActiveItem(t("about"))
+        if (pathname === "/projects") setActiveItem(t("projects"))
+        if (pathname === "/resume") setActiveItem(t("resume"))
     },[pathname])
-
+    
     const navData = [
-        {name: "About", route: "/"},
-        {name: "Projects", route: "/projects"},
-        {name: "Resume", route: "/resume"},
+        {name: "about", route: "/"},
+        {name: "projects", route: "/projects"},
+        {name: "resume", route: "/resume"},
     ]
+    
+    const handleSelecLink = () => {}
 
     return (
         <div className="flex justify-between px-5 py-3 my-3">
@@ -58,12 +59,14 @@ const Navbar = () => {
                                     activeItem={activeItem}
                                     name={item.name}
                                     route={item.route}
-                                    handleSelecLink={() => handleSelecLink}/>
+                                    handleSelecLink={handleSelecLink}/>
                     })
                 }
             </div>
         </div>
     )
 }
+
+
 
 export default Navbar

@@ -17,3 +17,14 @@ export const fadeInUpChildrens = {
         }
     }
 }
+
+export const fadeInUPSkills = {
+    initial: {
+        opacity: 0,
+        y: 60
+    },
+    animate: {
+        opacity: 1,
+        y: -35
+    },
+}
