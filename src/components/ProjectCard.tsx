@@ -7,6 +7,7 @@ import { MdClose } from "react-icons/md"
 import {motion} from "framer-motion"
 import { fadeInUP, fadeInUpChildrens } from "../../animations";
 import {AiOutlineGlobal} from 'react-icons/ai'
+import { useTranslation } from "react-i18next"
 
 const ProjectCard: FunctionComponent<{project: IProjects}> = ({
     project: {
@@ -19,6 +20,8 @@ const ProjectCard: FunctionComponent<{project: IProjects}> = ({
         key_techs,
     }
 }) => {
+
+    const { t } = useTranslation('projects')
 
     const [showDatail, setShowDetail] = useState(false)
 
@@ -39,14 +42,16 @@ const ProjectCard: FunctionComponent<{project: IProjects}> = ({
                     <motion.div variants={fadeInUP}>
                         <Image src={image_path} alt={name} width={100} height={50} layout="responsive" className="rounded-xl dark:text-white"/>
                         <motion.div variants={fadeInUpChildrens} animate="animate" initial="initial" className="flex justify-center my-4 space-x-3"> 
-                            <motion.a 
+                            <motion.a
+                                target="_blank" 
                                 variants={fadeInUP} 
-                                href={github_url} 
+                                href={github_url}
                                 className="flex items-center justify-center px-2 py-1 space-x-3 text-sm bg-gray-200 lg:text-lg lg:py-2 lg:px-4 dark:bg-gray-600 item-center rounded-xl">
                                 <AiFillGithub  className="w-5 h-5 text-black lg:w-10 lg:h-10"/>
                                 <span>Github</span>
                             </motion.a>
                             <motion.a
+                                target="_blank"
                                 variants={fadeInUP} 
                                 href={deployed_url}
                                 className="flex items-center justify-center px-2 py-1 space-x-3 text-sm bg-gray-200 lg:text-lg lg:py-2 lg:px-4 dark:bg-gray-600 item-center rounded-xl">
@@ -57,7 +62,7 @@ const ProjectCard: FunctionComponent<{project: IProjects}> = ({
                     </motion.div>
                     <motion.div variants={fadeInUP}>
                         <h2 className="mb-3 text-xl font-medium md:text-2xl">{name}</h2>
-                        <h3 className="mb-3 font-medium">{description}</h3>
+                        <h3 className="mb-3 font-medium">{t(description)}</h3>
                         <div className="flex flex-wrap items-center justify-end mt-5 space-x-2 text-sm lg:justify-start">
                             {
                                 key_techs.map(tech => {

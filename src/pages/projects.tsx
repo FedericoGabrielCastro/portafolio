@@ -31,7 +31,7 @@ const Projects = () => {
                 handlerFilterCategory={handlerFilterCategory}
                 active={active}
             />
-            <motion.div variants={fadeInUpChildrens} animate="animate" initial="initial" className="relative grid grid-cols-12 gap-4 p-2 my-3 overflow-scroll ">
+            <motion.div variants={fadeInUpChildrens} animate="animate" initial="initial" className="relative grid grid-cols-12 gap-4 p-2 my-3">
                 {
                     projects.map(projects => {
                         return (

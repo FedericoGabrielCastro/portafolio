@@ -75,45 +75,9 @@ export const skills: ISkills[] = [
 export const projects: IProjects[] = [
     {
         name: "Portafolio",
-        description: "The portfolio where are you seeing this",
-        image_path: "/portafolio.jpg",
-        deployed_url: "",
-        github_url: "https://github.com/FedericoGabrielCastro/portafolio",
-        category: ["next"],
-        key_techs: ["Next", "Typescript", "Tailwind"]
-    },
-    {
-        name: "Portafolio",
-        description: "The portfolio where are you seeing this",
-        image_path: "/portafolio.jpg",
-        deployed_url: "",
-        github_url: "https://github.com/FedericoGabrielCastro/portafolio",
-        category: ["next"],
-        key_techs: ["Next", "Typescript", "Tailwind"]
-    },
-    {
-        name: "Portafolio",
-        description: "The portfolio where are you seeing this",
-        image_path: "/portafolio.jpg",
-        deployed_url: "",
-        github_url: "https://github.com/FedericoGabrielCastro/portafolio",
-        category: ["next"],
-        key_techs: ["Next", "Typescript", "Tailwind"]
-    },
-    {
-        name: "Portafolio",
-        description: "The portfolio where are you seeing this",
-        image_path: "/portafolio.jpg",
-        deployed_url: "",
-        github_url: "https://github.com/FedericoGabrielCastro/portafolio",
-        category: ["next"],
-        key_techs: ["Next", "Typescript", "Tailwind"]
-    },
-    {
-        name: "Portafolio",
-        description: "The portfolio where are you seeing this",
-        image_path: "/portafolio.jpg",
-        deployed_url: "",
+        description: "portafolio",
+        image_path: "/img/portafolio.png",
+        deployed_url: "https://portafolio-five-mu.vercel.app/",
         github_url: "https://github.com/FedericoGabrielCastro/portafolio",
         category: ["next"],
         key_techs: ["Next", "Typescript", "Tailwind"]
