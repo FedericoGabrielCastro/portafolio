@@ -79,7 +79,7 @@ export const projects: IProjects[] = [
         image_path: "/img/portafolio.png",
         deployed_url: "https://portafolio-five-mu.vercel.app/",
         github_url: "https://github.com/FedericoGabrielCastro/portafolio",
-        category: ["next"],
+        category: ["next", "typescript"],
         key_techs: ["Next", "Typescript", "Tailwind"]
     },
 ]
